@@ -1,7 +1,7 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<!-- comment -->
+<!-- comment2 -->
 <a href="course/form">HERE</a>
 </body>
 </html>
