@@ -18,6 +18,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 	public void addResourceHandlers(ResourceHandlerRegistry registry){
 		super.addResourceHandlers(registry);
 		registry.addResourceHandler("/views/**").addResourceLocations("WEB-INF/views/");
+		registry.addResourceHandler("/resource/**").addResourceLocations("resource/");
 	}
 	
 	@Bean

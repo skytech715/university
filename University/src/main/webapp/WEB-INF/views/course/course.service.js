@@ -22,5 +22,7 @@ function courseService($log, $http){
       url : '/course/loadCourse/' + courseId
     });
   };
+  
+  return svc;
 }
 })();

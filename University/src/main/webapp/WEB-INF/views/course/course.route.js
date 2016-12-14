@@ -1,14 +1,14 @@
 angular.module('mainApp').config(function($stateProvider, $urlRouterProvider, $locationProvider) { 
 	
-	$stateProvider.state('home', {
-		url: '/home',
+	$stateProvider.state('course.main', {
+		url: '/course',
 		views:
 		{
 			'header': { templateUrl: 'header.html' },
 			'footer': { templateUrl: 'footer.html' },
 			'content' : 
 			{ 
-				templateUrl: 'views/home/home.html',
+				templateUrl: 'views/course/course-form.html',
 			}
 		},
 	})
