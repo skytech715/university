@@ -1,3 +1,4 @@
+
 body,
 figure {
     position: relative
@@ -1967,20 +1968,16 @@ input[class*=bg-]+.form-control-feedback {
 }
 
 .caret {
-    font-style: normal;
-    border: 0;
-    margin: -1px 0 0;
-    width: auto;
-    height: auto;
-    text-align: center
-}
-
-.caret:after {
-    content: '\e9c5';
+    font-family: 'FontAwesome';
+    content: "\f107";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
     display: block;
-    font-size: 16px;
-    width: 16px;
-    line-height: 1
 }
 
 .dropdown-menu {
@@ -5981,7 +5978,7 @@ a.thumbnail:hover {
 }
 
 .media-annotation.dotted:not(.pull-right):before {
-    content: 'â€¢';
+    content: 'Ã¢â‚¬Â¢';
     margin-right: 10px
 }
 
