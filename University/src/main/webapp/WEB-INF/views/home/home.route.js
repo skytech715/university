@@ -4,8 +4,8 @@ angular.module('mainApp').config(function($stateProvider, $urlRouterProvider, $l
 		url: '/home',
 		views:
 		{
-			'header': { templateUrl: 'header.html' },
-			'footer': { templateUrl: 'footer.html' },
+			/*'header': { templateUrl: 'header.html' },
+			'footer': { templateUrl: 'footer.html' },*/
 			'content' : 
 			{ 
 				templateUrl: 'views/home/home.html',
