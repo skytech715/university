@@ -22,9 +22,12 @@
     <script src="views/mainApp.js"></script>
     <script src="views/back-to-top.directive.js"></script>
     <script src="views/home/home.route.js"></script>
+    <script src="views/course/course.route.js"></script>
    	<script src="views/course/course.service.js"></script>
-	  <script src="views/course/course.route.js"></script>
 	  <script src="views/course/course.controller.js"></script>
+    <script src="views/subject/subject.route.js"></script>
+    <script src="views/subject/subject.service.js"></script>
+    <script src="views/subject/subject.controller.js"></script>
 
 
 <style>

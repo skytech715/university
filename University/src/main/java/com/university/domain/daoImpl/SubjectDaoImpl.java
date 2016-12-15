@@ -44,7 +44,7 @@ public class SubjectDaoImpl implements SubjectDao{
 	public List<SubjectBean> list() {
 		// TODO Auto-generated method stub
 		Criteria cr = getSession().createCriteria(SubjectBean.class)
-				.addOrder(Order.asc("subject_id"));
+				.addOrder(Order.asc(SUBJECT_ID));
 		return cr.list();
 	}
 

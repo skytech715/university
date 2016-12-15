@@ -32,8 +32,7 @@ public class SubjectServiceImpl implements SubjectService{
 
 	public SubjectBean load(int subjectId) {
 		// TODO Auto-generated method stub
-		subjectDao.load(subjectId);
-		return null;
+		return subjectDao.load(subjectId);
 	}
 
 }

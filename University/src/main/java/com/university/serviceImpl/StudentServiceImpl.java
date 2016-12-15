@@ -32,8 +32,7 @@ public class StudentServiceImpl implements StudentService{
 
 	public StudentBean load(int studentId) {
 		// TODO Auto-generated method stub
-		studentDao.load(studentId);
-		return null;
+		return studentDao.load(studentId);
 	}
 
 }

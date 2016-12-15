@@ -42,7 +42,7 @@ function CourseController($scope, $state, $window, courseService){
 
   self.getCourseByCourseId = function(){
     courseService.getCourseByCourseId(self.course.courseId).then(function(response){
-      self.course = response.data
+      self.course = response.data;
     });
   };
 

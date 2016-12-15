@@ -9,39 +9,14 @@
          <div ui-view></div>
 
          <jsp:include page="footer.jsp" />
-         
+
          <back-to-top></back-to-top>
 
-	      <h2>Hello World!</h2>
+	      <h1>TESTING STAGE</h1>
 	      <!-- comment -->
-	      <p ui-sref="course">HERE</p>
-	      <input type="submit" value="New Button">
-	      <h2>Hello World!</h2>
-	      <!-- comment -->
-	      <p ui-sref="course">HERE</p>
-	      <input type="submit" value="New Button">
-	      <h2>Hello World!</h2>
-	      <!-- comment -->
-	      <p ui-sref="course">HERE</p>
-	      <input type="submit" value="New Button">
-	      <h2>Hello World!</h2>
-	      <!-- comment -->
-	      <p ui-sref="course">HERE</p>
-	      <input type="submit" value="New Button">
-	      <h2>Hello World!</h2>
-	      <!-- comment -->
-	      <p ui-sref="course">HERE</p>
-	      <input type="submit" value="New Button">
-	      <h2>Hello World!</h2>
-	      <!-- comment -->
-	      <p ui-sref="course">HERE</p>
-	      <input type="submit" value="New Button">
-	      <h2>Hello World!</h2>
-	      <!-- comment -->
-	      <a ui-sref="course">HERE</a>
-	      <input type="submit" value="New Button">
-	      
+				<a ui-sref="course">Course Over HERE</a><br>
+	      <a ui-sref="subject">Subject Over HERE</a>
 
-		
    </body>
+
 </html>

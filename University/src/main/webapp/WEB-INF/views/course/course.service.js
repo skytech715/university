@@ -45,6 +45,8 @@ function courseService($log, $http){
 		  url : 'course/deleteCourse/' + courseId
 	  });
   };
+
   return svc;
+  
 }
 })();

@@ -46,10 +46,10 @@
 
 		<div class="navbar-collapse collapse" id="navbar-second-toggle">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.html"><i class="icon-display4 position-left"></i> Dashboard</a></li>
+				<li><a href="#"><i class="icon-display4 position-left"></i> Dashboard</a></li>
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<a ui-sref="course" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-make-group position-left"></i> Course <span class="caret"></span>
 					</a>
 
