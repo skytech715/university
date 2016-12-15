@@ -5978,7 +5978,7 @@ a.thumbnail:hover {
 }
 
 .media-annotation.dotted:not(.pull-right):before {
-    content: 'Ã¢â‚¬Â¢';
+    content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢';
     margin-right: 10px
 }
 
@@ -6773,4 +6773,13 @@ h6.panel-title {
 .popover[class*=border-].left>.arrow,
 .popover[class*=border-].left>.arrow:after {
     border-left-color: inherit
+}
+.heading-elements ul li {
+    cursor:pointer;  
+}
+.heading-elements ul li:hover{
+    color: #2196F3!important
+}
+.m-r-5{
+    margin-right:5px;
 }

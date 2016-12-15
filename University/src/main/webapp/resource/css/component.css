@@ -2828,8 +2828,8 @@ label.checkbox-switch.checkbox-inline {
 }
 
 .select2-selection--single .select2-selection__arrow:after {
-    content: '\e9c5';
-    font-family: Icomoon;
+    content: '\f107';
+    font-family: 'FontAwesome';
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -18147,7 +18147,7 @@ thead .htCollapseButton:after {
 .dataTable thead .sorting_desc:after,
 .dataTable thead .sorting_desc_disabled:after {
     content: '';
-    font-family: icomoon;
+    font-family: 'FontAwesome';
     position: absolute;
     top: 50%;
     right: 20px;
@@ -18160,14 +18160,14 @@ thead .htCollapseButton:after {
 }
 
 .dataTable thead .sorting:before {
-    content: '\e9c1';
+    content: '\f107';
     margin-top: -2px;
     color: #999
 }
 
 .dataTable thead .sorting:after,
 .dataTable thead .sorting_asc:after {
-    content: '\e9c2'
+    content: '\f106'
 }
 
 .dataTable thead .sorting:after {
@@ -18296,8 +18296,8 @@ thead .htCollapseButton:after {
 }
 
 .dataTables_filter>label:after {
-    content: "\e98e";
-    font-family: icomoon;
+    content: "\f002";
+    font-family: 'FontAwesome';
     font-size: 12px;
     display: inline-block;
     position: absolute;
@@ -18308,6 +18308,7 @@ thead .htCollapseButton:after {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
+
 }
 
 .DTFC_LeftBodyWrapper .DTFC_Cloned thead th:after,
@@ -19768,7 +19769,7 @@ thead .htCollapseButton:after {
         margin-top: 0
     }
     .task-details>li:before {
-        content: 'â€¢';
+        content: 'Ã¢â‚¬Â¢';
         position: absolute;
         right: 8px;
         color: #999
@@ -20116,7 +20117,7 @@ thead .htCollapseButton:after {
 }
 
 .timeline-time span:before {
-    content: 'â€¢';
+    content: 'Ã¢â‚¬Â¢';
     display: inline-block;
     margin-right: 5px;
     position: relative;

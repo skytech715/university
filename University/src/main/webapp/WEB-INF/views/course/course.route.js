@@ -12,6 +12,5 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 			pageTitle: 'Course'
 	  }
 	});
-
 }]);
 })();
