@@ -1,16 +1,17 @@
-angular.module('mainApp').config(function($stateProvider, $urlRouterProvider, $locationProvider) { 
-	
-	$stateProvider.state('course.main', {
-		url: '/course',
-		views:
-		{
-			'header': { templateUrl: 'header.html' },
-			'footer': { templateUrl: 'footer.html' },
-			'content' : 
-			{ 
-				templateUrl: 'views/course/course-form.html',
-			}
-		},
-	})
-});
+'use strict';
 
+(function(){
+angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+
+	$stateProvider.state('course', {
+		url: '/course',
+		templateUrl: 'views/course/course-form.html',
+		controller: 'CourseController',
+		controllerAs: 'courseController',
+		data: {
+			pageTitle: 'Course'
+	  }
+	});
+
+}]);
+})();

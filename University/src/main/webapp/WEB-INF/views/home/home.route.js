@@ -1,16 +1,15 @@
-angular.module('mainApp').config(function($stateProvider, $urlRouterProvider, $locationProvider) { 
-	
+'use strict';
+
+(function(){
+angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+
 	$stateProvider.state('home', {
 		url: '/home',
-		views:
-		{
-			/*'header': { templateUrl: 'header.html' },
-			'footer': { templateUrl: 'footer.html' },*/
-			'content' : 
-			{ 
-				templateUrl: 'views/home/home.html',
-			}
-		},
-	})
-});
+		templateUrl: 'views/home/home.html',
+		data: {
+			pageTitle: 'Home'
+	  }
+	});
 
+}]);
+})();
