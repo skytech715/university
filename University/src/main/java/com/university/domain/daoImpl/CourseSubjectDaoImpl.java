@@ -23,14 +23,14 @@ public class CourseSubjectDaoImpl implements CourseSubjectDao{
 	public static final String COURSE_COURSE_ID = "courseBean.courseId";
 	public static final String SUBJECT_BEAN = "subjectBean";
 	public static final String SUBJECT_SUBJECT_ID = "subjectBean.subjectId";
-	
+
 	@Autowired
 	SessionFactory sessionFactory;
-	
+
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-	
+
 	protected Session getSession(){
 		SessionFactory sessionFactory = getSessionFactory();
 		return sessionFactory.getCurrentSession();
@@ -45,7 +45,7 @@ public class CourseSubjectDaoImpl implements CourseSubjectDao{
 	public List<CourseSubjectBean> list() {
 		// TODO Auto-generated method stub
 		Criteria cr = getSession().createCriteria(CourseSubjectBean.class)
-				.addOrder(Order.asc("courseSubjectId"));
+				.addOrder(Order.asc(COURSE_SUBJECT_ID));
 		return cr.list();
 	}
 

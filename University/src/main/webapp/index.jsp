@@ -15,8 +15,8 @@
 	      <h1>TESTING STAGE</h1>
 	      <!-- comment -->
 				<a ui-sref="course">Course Over HERE</a><br>
-	      <a ui-sref="subject">Subject Over HERE</a>
-
+	      <a ui-sref="subject">Subject Over HERE</a><br>
+				<a ui-sref="student">Student Over HERE</a>
    </body>
 
 </html>

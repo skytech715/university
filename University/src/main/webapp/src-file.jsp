@@ -28,6 +28,9 @@
     <script src="views/subject/subject.route.js"></script>
     <script src="views/subject/subject.service.js"></script>
     <script src="views/subject/subject.controller.js"></script>
+    <script src="views/student/student.route.js"></script>
+    <script src="views/student/student.service.js"></script>
+    <script src="views/student/student.controller.js"></script>
 
 
 <style>

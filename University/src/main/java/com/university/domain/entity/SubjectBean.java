@@ -13,8 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.Proxy;
 
 @Entity
@@ -42,7 +40,6 @@ public class SubjectBean implements Serializable{
 	private double creditHour;
 	
 	@OneToMany(mappedBy="subjectBean", orphanRemoval=true, cascade=CascadeType.ALL)
-	@LazyCollection(LazyCollectionOption.FALSE)
 	@JsonIgnore
 	private List<CourseSubjectBean> courseSubjectBean;
 

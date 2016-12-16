@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.university.domain.entity.StudentBean;
+import com.university.service.CourseService;
 import com.university.service.StudentService;
 
 @RestController
@@ -21,6 +22,9 @@ public class StudentRestController {
 	
 	@Autowired
 	private StudentService studentService;
+	
+	@Autowired
+	private CourseService courseService;
 
 	@RequestMapping(value = "/form", method = RequestMethod.GET)
     public ModelAndView getPage() {
@@ -28,14 +32,16 @@ public class StudentRestController {
         return view;
     }
 	
-	@RequestMapping(value = "/saveStudent", method=RequestMethod.POST)
-	public StudentBean saveStudent(@RequestBody StudentBean studentBean){
+	@RequestMapping(value = "/saveStudent/{courseId}", method=RequestMethod.POST)
+	public StudentBean saveStudent(@PathVariable("courseId") int courseId, @RequestBody StudentBean studentBean){
+		studentBean.setCourseBean(courseService.load(courseId));
 		studentService.saveOrUpdate(studentBean);
 		return studentBean;
 	}
 	
-	@RequestMapping(value="/updateStudent", method=RequestMethod.POST)
-	public StudentBean updateStudent(@RequestBody StudentBean studentBean){
+	@RequestMapping(value="/updateStudent/{courseId}", method=RequestMethod.POST)
+	public StudentBean updateStudent(@PathVariable("courseId") int courseId, @RequestBody StudentBean studentBean){
+		studentBean.setCourseBean(courseService.load(courseId));
 		studentService.saveOrUpdate(studentBean);
 		return studentBean;
 	}

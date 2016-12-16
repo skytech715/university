@@ -17,7 +17,7 @@ import com.university.domain.entity.StudentBean;
 @Repository("StudentDao")
 @Transactional
 public class StudentDaoImpl implements StudentDao{
-	
+
 	public static final String STUDENT_ID = "studentId";
 	public static final String STUDENT_NAME = "name";
 	public static final String STUDENT_NRIC = "nric";
@@ -27,11 +27,11 @@ public class StudentDaoImpl implements StudentDao{
 
 	@Autowired
 	SessionFactory sessionFactory;
-	
+
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-	
+
 	protected Session getSession(){
 		SessionFactory sessionFactory = getSessionFactory();
 		return sessionFactory.getCurrentSession();
@@ -46,7 +46,7 @@ public class StudentDaoImpl implements StudentDao{
 	public List<StudentBean> list() {
 		// TODO Auto-generated method stub
 		Criteria cr = getSession().createCriteria(StudentBean.class)
-				.addOrder(Order.asc("student_id"));
+				.addOrder(Order.asc(STUDENT_ID));
 		return cr.list();
 	}
 
