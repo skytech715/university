@@ -44,7 +44,7 @@ public class CourseDaoImpl implements CourseDao{
 	public List<CourseBean> list() {
 		// TODO Auto-generated method stub
 		Criteria cr = getSession().createCriteria(CourseBean.class)
-				.addOrder(Order.asc("courseId"));
+				.addOrder(Order.asc(COURSE_ID));
 		return cr.list();
 	}
 

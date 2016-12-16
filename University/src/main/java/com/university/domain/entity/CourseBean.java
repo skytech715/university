@@ -13,8 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.Proxy;
 
 @Entity
@@ -41,13 +39,11 @@ public class CourseBean implements Serializable{
 	@Column(name = "year_to_finish")
 	private int yearToFinish;
 	
-	@OneToMany(mappedBy="courseBean", orphanRemoval=false, cascade=CascadeType.ALL)
-	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(mappedBy="courseBean", orphanRemoval=true, cascade=CascadeType.ALL)
 	@JsonIgnore
 	private List<StudentBean> studentBean;
 	
-	@OneToMany(mappedBy="courseBean", orphanRemoval=false, cascade=CascadeType.ALL)
-	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(mappedBy="courseBean", orphanRemoval=true, cascade=CascadeType.ALL)
 	@JsonIgnore
 	private List<CourseSubjectBean> courseSubjectBean;
 	
