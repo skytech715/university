@@ -1438,9 +1438,10 @@ input[class*=bg-]+.form-control-feedback {
     .form-horizontal .control-label {
         padding-bottom: 7px;
         padding-top: 0
+        text-align:right;
     }
     .form-horizontal .control-label:not(.text-right) {
-        text-align: left
+        text-align: right;
     }
 }
 
@@ -1810,8 +1811,9 @@ input[class*=bg-]+.form-control-feedback {
 .open>.dropdown-toggle.btn-default.focus,
 .open>.dropdown-toggle.btn-default:focus,
 .open>.dropdown-toggle.btn-default:hover {
-    background-color: #fcfcfc;
-    border-color: #ddd
+    background-color: #354959;
+    border-color: #354959;
+    color:#fff;
 }
 
 .btn-default.disabled {
@@ -5978,7 +5980,7 @@ a.thumbnail:hover {
 }
 
 .media-annotation.dotted:not(.pull-right):before {
-    content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢';
+    content: 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢';
     margin-right: 10px
 }
 
@@ -6782,4 +6784,182 @@ h6.panel-title {
 }
 .m-r-5{
     margin-right:5px;
+}
+/*===================================
+            Table Contents
+====================================*/
+.x_panel {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 17px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #E6E9ED;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  opacity: 1;
+  transition: all .2s ease; 
+ }
+
+.x_title {
+  padding: 1px 5px 6px;
+   margin-top: 5px;
+  margin-bottom: 5px;
+  height:50px;
+  }
+
+.x_content {
+    padding: 0 5px 6px;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+}
+table.jambo_table {
+  border: 1px solid rgba(221, 221, 221, 0.78); 
+  font-size:14px;
+}
+
+table.jambo_table thead {
+  background: rgba(55, 71, 79, 0.94);
+  color: #ECF0F1; }
+
+table.jambo_table tbody tr:hover td {
+  background: rgba(38, 185, 154, 0.07);
+  border-top: 1px solid rgba(38, 185, 154, 0.11);
+  border-bottom: 1px solid rgba(38, 185, 154, 0.11); }
+
+table.jambo_table tbody tr.selected {
+  background: rgba(38, 185, 154, 0.16); }
+
+table.jambo_table tbody tr.selected td {
+  border-top: 1px solid rgba(38, 185, 154, 0.4);
+  border-bottom: 1px solid rgba(38, 185, 154, 0.4); 
+}
+.btn1{
+ padding: 4px 8px;
+}
+.color-white{
+	color:#fff;
+}
+.color-white.tooltips span {
+  position: absolute;
+  width: auto;
+  color: #FFFFFF;
+  background: #3D3D3D;
+  height: auto;
+  line-height: 15px;
+  text-align: center;
+  visibility: hidden;
+  font-size: 0.8em;
+  padding:5px;
+  white-space:pre-line;
+  border-radius:5px;
+}
+.color-white.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #3D3D3D;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+.color-white:hover.tooltips span {
+  visibility: visible;
+  opacity: 1;
+  top: -30px;
+  left: 90%;
+  margin-left: -38px;
+  z-index: 999;
+}
+.dataTables_paginate {
+  float: right;
+  text-align: right; 
+ }
+
+@media (max-width: 466px) {
+  .x_title .filter {
+  width: 40%;
+  float: right; 
+ }
+
+.x_title h2 {
+  margin: 5px 0 6px;
+  float: left;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+  font-size:25px;
+  }
+
+.x_title h2 small {
+  margin-left: 10px; 
+  }
+
+.x_title span {
+  color: #BDBDBD; 
+  }
+
+.x_content {
+  padding: 0 5px 6px;
+  position: relative;
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-top: 5px; 
+  }
+
+.x_content h4 {
+  font-size: 16px;
+  font-weight: 500; 
+  }
+  
+}
+@media (max-width: 466px) {
+ .border-bottom{
+   border-bottom: none;
+  }
+}
+.x_title .filter {
+  width: 40%;
+  float: right; }
+
+.x_title h2 {
+  margin: 5px 0 6px;
+  float: left;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+  font-size:25px;
+  color:#37474F;
+  }
+
+.x_title h2 small {
+  margin-left: 10px; }
+
+.x_title span {
+  color: #BDBDBD; }
+
+.x_content {
+  padding: 0 5px 6px;
+  position: relative;
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-top: 5px; }
+
+.x_content h4 {
+  font-size: 16px;
+  font-weight: 500; }
+
+}
 }

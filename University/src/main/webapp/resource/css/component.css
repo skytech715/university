@@ -18355,7 +18355,7 @@ thead .htCollapseButton:after {
 .dataTables_paginate {
     float: right;
     text-align: right;
-    margin: 0 0 20px 20px
+    margin: 10px 0 10px 10px;
 }
 
 .dataTables_paginate .paginate_button {
@@ -18367,10 +18367,23 @@ thead .htCollapseButton:after {
     text-decoration: none;
     cursor: pointer;
     color: #333;
-    border: 1px solid transparent;
+    border: 1px solid #ddd;
     border-radius: 3px
 }
-
+.dataTables_paginate a {
+    padding: 5px 10px !important;
+    font-size: 12px;
+    moz-border-radius: 3px;
+    webkit-border-radius: 3px;
+    border-radius: 3px;
+    float: left;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #22262e;
+    margin-left: 3px;
+    cursor: pointer;
+}
 .dataTables_scroll .dataTables_scrollBody table,
 .dataTables_scroll .dataTables_scrollHead table,
 .panel>.dataTables_wrapper .table-bordered>tbody>tr:last-child>td,
@@ -18390,8 +18403,9 @@ thead .htCollapseButton:after {
 .dataTables_paginate .paginate_button.current,
 .dataTables_paginate .paginate_button.current:focus,
 .dataTables_paginate .paginate_button.current:hover {
-    color: #fff;
-    background-color: #455A64
+    background: #1b1e24;
+    color: #FFF;
+    border-color: #1b1e24;
 }
 
 .dataTables_paginate .paginate_button.disabled,
@@ -19769,7 +19783,7 @@ thead .htCollapseButton:after {
         margin-top: 0
     }
     .task-details>li:before {
-        content: 'Ã¢â‚¬Â¢';
+        content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢';
         position: absolute;
         right: 8px;
         color: #999
@@ -20117,7 +20131,7 @@ thead .htCollapseButton:after {
 }
 
 .timeline-time span:before {
-    content: 'Ã¢â‚¬Â¢';
+    content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢';
     display: inline-block;
     margin-right: 5px;
     position: relative;
@@ -21412,7 +21426,7 @@ label.display-block {
 }
 
 .border-bottom {
-    border-bottom: 1px solid
+    border-bottom: 2px solid #E6E9ED;
 }
 
 .border-left {

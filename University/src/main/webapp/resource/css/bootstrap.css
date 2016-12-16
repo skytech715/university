@@ -1380,8 +1380,8 @@ body {
     font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 13px;
     line-height: 1.5384616;
-    color: #333;
-    background-color: #f5f5f5
+    color: #37474F;
+    background-color: #f5f5f5;
 }
 
 button,
@@ -2785,7 +2785,7 @@ caption {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding: 12px 20px;
+    padding:8px;
     line-height: 1.5384616;
     vertical-align: top;
     border-top: 1px solid #ddd
@@ -3650,9 +3650,9 @@ fieldset[disabled] a.btn {
 }
 
 .btn-default {
-    color: #333;
-    background-color: #fcfcfc;
-    border-color: #ddd
+     color: #fff;
+  background-color: #37474F;
+  border-color: #37474F;
 }
 
 .btn-default.focus,
@@ -4159,15 +4159,15 @@ tbody.collapse.in {
 .btn-group>.btn-group:first-child:not(:last-child)>.btn:last-child,
 .btn-group>.btn-group:first-child:not(:last-child)>.dropdown-toggle,
 .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .btn-group>.btn-group:last-child:not(:first-child)>.btn:first-child,
 .btn-group>.btn:last-child:not(:first-child),
 .btn-group>.dropdown-toggle:not(:first-child) {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0
+    border-bottom-left-radius: 3px;
+    border-top-left-radius:3px;
 }
 
 .btn-group-vertical>.btn:not(:first-child):not(:last-child),
@@ -4293,7 +4293,8 @@ tbody.collapse.in {
 .btn-group-vertical>.btn,
 .btn-group>.btn {
     position: relative;
-    float: left
+    float: left;
+    margin-right:3px;
 }
 
 .btn-group-vertical>.btn.active,
@@ -4311,7 +4312,7 @@ tbody.collapse.in {
 .btn-group .btn+.btn-group,
 .btn-group .btn-group+.btn,
 .btn-group .btn-group+.btn-group {
-    margin-left: -1px
+    margin-left:3px;
 }
 
 .btn-toolbar {
@@ -4335,8 +4336,8 @@ tbody.collapse.in {
 }
 
 .btn-group>.btn+.dropdown-toggle {
-    padding-left: 8px;
-    padding-right: 8px
+    padding-left: 3px;
+    padding-right: 3px
 }
 
 .btn-group>.btn-lg+.dropdown-toggle {
