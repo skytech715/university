@@ -17,8 +17,8 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 		templateUrl:'views/subject/subject-modify.html',
 		controller: 'SubjectController',
 		controllerAs: 'subjectController',
-		date: {
-			pageTitle:'Subject Modify'
+		data: {
+			pageTitle:'subject.modify'
 		}
 	});
 

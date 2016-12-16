@@ -12,12 +12,12 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 			pageTitle: 'Course'
 	  }
 	}).state
-	('courseModify',{
+	('course-modify',{
 		url:'/course-modify',
 		templateUrl:'views/course/course-modify.html',
 		controller:'CourseController',
 		controllerAs:'courseController',
-		date: {
+		data: {
 			pageTitle:'course.modify'
 		}
 	});
