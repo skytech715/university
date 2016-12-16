@@ -12,7 +12,7 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 			pageTitle: 'Student'
 	  }
 	}).state
-	('student-modify',{
+	('studentModify',{
 		url:'/student-modify',
 		templateUrl:'views/student/student-modify.html',
 		controller:'StudentController',
