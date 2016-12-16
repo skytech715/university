@@ -11,6 +11,15 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 		data: {
 			pageTitle: 'Student'
 	  }
+	}).state
+	('student-modify',{
+		url:'/student-modify',
+		templateUrl:'views/student/student-modify.html',
+		controller:'StudentController',
+		controllerAs:'studentController',
+		date: {
+			pageTitle:'student.modify'
+		}
 	});
 
 }]);

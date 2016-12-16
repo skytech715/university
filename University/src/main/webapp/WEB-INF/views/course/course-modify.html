@@ -1,0 +1,83 @@
+<div class="page-header">
+   <div class="page-header-content">
+      <div class="page-title">
+         <h4><i class="fa fa-chevron-circle-left position-left"></i> <span class="text-semibold">Home</span> - Course</h4>
+         <ul class="breadcrumb breadcrumb-caret position-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Course</a></li>
+            <li class="active">Add Course</li>
+         </ul>
+         <a class="heading-elements-toggle"><i class="icon-more"></i></a>
+      </div>
+   </div>
+</div>
+<div class="page-container" style="min-height:689px;">
+   <!-- Page content -->
+   <div class="page-content">
+      <!-- Main content -->
+      <div class="content-wrapper">
+         <!-- Single row selection -->
+         <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+      <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+      <div class="x_panel">
+         <div class="x_title border-bottom">
+            <h2>Add Course</h2>
+         </div>
+         <div class="x_content">
+            <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-invalid ng-invalid-required" name="form" novalidate="" ng-submit="submit()">
+               <div class="form-group" ng-class="{'has-error' : form.courseName.$dirty &amp;&amp; form.courseName.$invalid}">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="courseName">Course Name 
+                  	<span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                     <input type="text" ng-model="courseController.course.name" name="courseName" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="Course Name" required="">
+                  </div>
+                  <span class="help-block validMessage ng-binding ng-hide" ng-show="form.courseName.$dirty &amp;&amp; form.courseName.$error.required">
+						Please Fill 
+					</span>
+               </div>
+               <div class="form-group" ng-class="{'has-error' : form.courseLevel.$dirty &amp;&amp; form.courseLevel.$invalid}">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="courseLevel">Course Level
+                  	<span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                     <input type="text" ng-model="courseController.course.level" name="courseLevel" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="Course Level" required="">
+                  </div>
+                   <span class="help-block validMessage ng-binding ng-hide" ng-show="form.courseLevel.$dirty &amp;&amp; form.courseLevel.$error.required">
+						Please Fill 
+					</span>
+               </div>
+               <div class="form-group" ng-class="{'has-error' : form.year.$dirty &amp;&amp; form.year.$invalid}">
+                  <label for="year" class="control-label col-md-3 col-sm-3 col-xs-12">Year To Finish<span class="required">*</span></label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                     <select class="form-control" ng-model="courseController.course.yearToFinish" name="year" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="" required="">
+                        <option value="1">1 Year</option>
+                        <option value="2">2 Year</option>
+                        <option value="3">3 Year</option>
+                        <option value="4">4 Year</option>
+                        <option value="5">5 Year</option>
+                      </select>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                 	 <button type="submit" class="btn btn-default ng-binding" ng-disabled="form.$invalid" disabled="disabled">Submit</button>
+                     <button type="submit" class="btn btn-default ng-binding">Cancel</button>
+                     <button type="submit" class="btn btn-default ng-binding" href="index.jsp">Reset</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   </div>
+      </div>
+      <!-- /main content -->
+   </div>
+   <!-- /page content -->
+</div>
+<input type="text" ng-model="courseController.courseList[0].courseId" ng-hide="false">
+    <input type="text" ng-model="courseController.courseList[0].name">
+    <input type="text" ng-model="courseController.courseList[0].level">
+    <input type="text" ng-model="courseController.courseList[0].yearToFinish">
+    <input type="submit" ng-click="" value="NULL">

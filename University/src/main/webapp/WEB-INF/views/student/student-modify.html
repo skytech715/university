@@ -1,0 +1,87 @@
+<div class="page-header">
+   <div class="page-header-content">
+      <div class="page-title">
+         <h4><i class="fa fa-chevron-circle-left position-left"></i> <span class="text-semibold">Home</span> - Student</h4>
+         <ul class="breadcrumb breadcrumb-caret position-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Student</a></li>
+            <li class="active">Add Student</li>
+         </ul>
+         <a class="heading-elements-toggle"><i class="icon-more"></i></a>
+      </div>
+   </div>
+</div>
+<div class="page-container" style="min-height:689px;">
+   <!-- Page content -->
+   <div class="page-content">
+      <!-- Main content -->
+      <div class="content-wrapper">
+         <!-- Single row selection -->
+         <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+      <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+      <div class="x_panel">
+         <div class="x_title border-bottom">
+            <h2>Add Student</h2>
+         </div>
+         <div class="x_content">
+            <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-invalid ng-invalid-required" name="form" novalidate="" ng-submit="submit()">
+               <div class="form-group" ng-class="{'has-error' : form.courseName.$dirty &amp;&amp; form.courseName.$invalid}">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="courseName">Student Name 
+                  	<span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                     <input type="text" ng-model="studentController.student.name" name="courseName" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="Student Name" required="">
+                  </div>
+                  <span class="help-block validMessage ng-binding ng-hide" ng-show="form.courseName.$dirty &amp;&amp; form.courseName.$error.required">
+						Please Fill 
+					</span>
+               </div>
+               <div class="form-group" ng-class="{'has-error' : form.nric.$dirty &amp;&amp; form.nric.$invalid}">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nric">IC Number
+                  	<span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                     <input type="text" ng-model="studentController.student.nric" name="nric" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" 
+                      placeholder="IC Number" required="">
+                  </div>
+                   <span class="help-block validMessage ng-binding ng-hide" ng-show="form.nric.$dirty &amp;&amp; form.nric.$error.required">
+						Please Fill 
+					</span>
+               </div>
+               <div class="form-group" ng-class="{'has-error' : form.mobileNumber.$dirty &amp;&amp; form.mobileNumber.$invalid}">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mobileNumber">Mobile Number
+                  	<span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                     <input type="text" ng-model="studentController.student.mobileNumber" name="mobileNumber" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" 
+                     placeholder="Mobile Number" required="">
+                  </div>
+                   <span class="help-block validMessage ng-binding ng-hide" ng-show="form.mobileNumber.$dirty &amp;&amp; form.mobileNumber.$error.required">
+						Please Fill 
+					</span>
+               </div>
+               <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                 	 <button type="submit" class="btn btn-default ng-binding" ng-disabled="form.$invalid" disabled="disabled">Submit</button>
+                     <button type="submit" class="btn btn-default ng-binding">Cancel</button>
+                     <button type="submit" class="btn btn-default ng-binding" href="index.jsp">Reset</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   </div>
+      </div>
+      <!-- /main content -->
+   </div>
+   <!-- /page content -->
+</div>
+
+
+<input type="text" ng-model="studentController.student.studentId" ng-hide="false">
+    <input type="text" ng-model="studentController.student.name">
+    <input type="text" ng-model="studentController.student.nric">
+    <input type="text" ng-model="studentController.student.mobileNumber">
+    <input type="text" ng-model="studentController.courseId">
+    <input type="submit" ng-click="" value="">
