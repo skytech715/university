@@ -34,9 +34,9 @@ function CourseController($scope, $state, $window, courseService){
     });
   };
 
-  self.deleteCourse = function(){
-    courseService.deleteCourse(self.course.courseId).then(function(response){
-        $state.go('home');
+  self.deleteCourse = function(courseId){
+    courseService.deleteCourse(courseId).then(function(response){
+        $state.reload();
     });
   };
 

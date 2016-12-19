@@ -3,8 +3,8 @@
       <div class="page-title">
          <h4><i class="fa fa-chevron-circle-left position-left"></i> <span class="text-semibold">Home</span> - Course</h4>
          <ul class="breadcrumb breadcrumb-caret position-right">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Course</a></li>
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="course">Course</a></li>
             <li class="active">Add Course</li>
          </ul>
          <a class="heading-elements-toggle"><i class="icon-more"></i></a>
@@ -26,14 +26,14 @@
          <div class="x_content">
             <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-invalid ng-invalid-required" name="form" novalidate="" ng-submit="submit()">
                <div class="form-group" ng-class="{'has-error' : form.courseName.$dirty &amp;&amp; form.courseName.$invalid}">
-                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="courseName">Course Name 
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="courseName">Course Name
                   	<span class="required">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                      <input type="text" ng-model="courseController.course.name" name="courseName" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="Course Name" required="">
                   </div>
                   <span class="help-block validMessage ng-binding ng-hide" ng-show="form.courseName.$dirty &amp;&amp; form.courseName.$error.required">
-						Please Fill 
+						Please Fill
 					</span>
                </div>
                <div class="form-group" ng-class="{'has-error' : form.courseLevel.$dirty &amp;&amp; form.courseLevel.$invalid}">
@@ -44,7 +44,7 @@
                      <input type="text" ng-model="courseController.course.level" name="courseLevel" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="Course Level" required="">
                   </div>
                    <span class="help-block validMessage ng-binding ng-hide" ng-show="form.courseLevel.$dirty &amp;&amp; form.courseLevel.$error.required">
-						Please Fill 
+						Please Fill
 					</span>
                </div>
                <div class="form-group" ng-class="{'has-error' : form.year.$dirty &amp;&amp; form.year.$invalid}">
@@ -62,8 +62,8 @@
                <div class="form-group">
                   <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                  	 <button type="submit" class="btn btn-default ng-binding" ng-disabled="form.$invalid" disabled="disabled">Submit</button>
-                     <button type="submit" class="btn btn-default ng-binding">Cancel</button>
-                     <button type="submit" class="btn btn-default ng-binding" href="index.jsp">Reset</button>
+                     <button type="submit" class="btn btn-default ng-binding" ui-sref="course">Cancel</button>
+                     <button type="reset" class="btn btn-default ng-binding" href="index.jsp">Reset</button>
                   </div>
                </div>
             </form>
