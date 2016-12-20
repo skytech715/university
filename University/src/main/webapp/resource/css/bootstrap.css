@@ -5463,9 +5463,9 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .pagination>.active>span:hover {
     z-index: 3;
     color: #fff;
-    background-color: #2196F3;
-    border-color: #2196F3;
-    cursor: default
+    background-color: #1b1e24;
+    border-color: #1b1e24;
+    cursor: default;
 }
 
 .pagination>.disabled>a,

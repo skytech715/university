@@ -36,33 +36,5 @@
     <script src="views/student/student.controller.js"></script>
 
 
-<style>
-.back-to-top {
-    position: fixed;
-    right: 0px;
-    bottom: 60px;
-    -webkit-box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 0.27);
-    -moz-box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 0.27);
-    box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 0.27);
-    margin-top: 8px;
-    background: #8a9eac;
-    color: #fff;
-    display: block;
-    opacity: 0;
-    padding: 10px;
-    font-size: 10px;
-    text-decoration: none;
-    text-transform: uppercase
-}
-
-.back-to-top i {
-    font-size: 18px
-}
-
-.back-to-top.fadein {
-    opacity: 1
-}
-</style>
-
    	<title>University | {{title}}</title>
 </head>

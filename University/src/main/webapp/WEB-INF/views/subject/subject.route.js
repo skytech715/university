@@ -18,8 +18,12 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 		controller: 'SubjectController',
 		controllerAs: 'subjectController',
 		data: {
-			pageTitle:'subject.modify'
-		}
+			pageTitle:'Subject'
+		},
+		params:{
+			subject: null
+		},
+		parent: 'subject'
 	});
 
 }]);

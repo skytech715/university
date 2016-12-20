@@ -41,18 +41,18 @@
 						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search=""></th>
 					</tr>
                   </thead>
-                  <tbody ng-repeat="subject in subjectController.subjectList">
+                  <tbody ng-repeat="subject in subjectController.subjectList | filter : subjectController.paginateFilter">
                      <tr class="even pointer">
                         <td class=" ">{{subject.name}}</td>
                         <td class=" ">{{subject.code}}</td>
                         <td class=" ">{{subject.creditHour}}</td>
                         <td>
                            <div class="btn-group">
-                               <button type="button" class="btn btn1 btn-default tooltips color-white">
+                               <button type="button" class="btn btn1 btn-default tooltips color-white" ng-click="subjectController.updateSubject(subject)">
                               <span class="tooltips-details">Update</span>
                               <i class="fa fa-pencil"></i>
                               </button>
-                              <button type="button" class="btn btn1 btn-default tooltips color-white">
+                              <button type="button" class="btn btn1 btn-default tooltips color-white" ng-click="subjectController.deleteSubject(subject.subjectId)">
                               <span class="tooltips-details">Delete</span>
                               <i class="fa fa-trash"></i>
                               </button>
@@ -61,17 +61,8 @@
                      </tr>           
                   </tbody>
                </table>
-               <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-               	<a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a>
-               	<span>
-               		<a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0">5</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0">6</a>
-               	</span>
-               		<a class="paginate_button next" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a>
+                 <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                 <pagination total-items="subjectController.subjectList.length" items-per-page="subjectController.numberPerPage" ng-model="subjectController.currentPage" max-size="5" boundary-links="true"  class="pagination-sm"></pagination>
                </div>
             </div>
          </div>

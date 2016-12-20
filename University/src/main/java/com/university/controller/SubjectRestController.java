@@ -24,18 +24,12 @@ public class SubjectRestController {
 	
 	@RequestMapping(value = "/form", method = RequestMethod.GET)
     public ModelAndView getPage() {
-        ModelAndView view = new ModelAndView("subject-form");
+        ModelAndView view = new ModelAndView("subject/subject-form");
         return view;
     }
 	
-	@RequestMapping(value = "/saveSubject", method=RequestMethod.POST)
-	public SubjectBean saveSubject(@RequestBody SubjectBean subjectBean){
-		subjectService.saveOrUpdate(subjectBean);
-		return subjectBean;
-	}
-	
-	@RequestMapping(value="/updateSubject", method=RequestMethod.POST)
-	public SubjectBean updateSubject(@RequestBody SubjectBean subjectBean){
+	@RequestMapping(value = "/saveOrUpdateSubject", method=RequestMethod.POST)
+	public SubjectBean saveOrUpdateSubject(@RequestBody SubjectBean subjectBean){
 		subjectService.saveOrUpdate(subjectBean);
 		return subjectBean;
 	}

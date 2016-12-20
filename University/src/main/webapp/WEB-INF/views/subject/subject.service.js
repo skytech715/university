@@ -26,15 +26,7 @@ function subjectService($log, $http){
   svc.saveSubject = function(subject){
 	  return $http({
 		  method : 'POST',
-		  url : 'subject/saveSubject',
-      data : subject
-	  });
-  };
-
-  svc.updateSubject = function(subject){
-    return $http({
-		  method : 'POST',
-		  url : 'subject/updateSubject',
+		  url : 'subject/saveOrUpdateSubject',
       data : subject
 	  });
   };

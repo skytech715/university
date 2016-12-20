@@ -4,16 +4,22 @@
 angular.module('mainApp')
 .controller('SubjectController', SubjectController);
 
-SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService'];
+SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService', 'paginateService'];
 
-function SubjectController($scope, $state, $window, subjectService){
+function SubjectController($scope, $state, $window, subjectService, paginateService){
   var self = this;
-  self.subject = {};
-
+  self.subject = $state.params.subject;
+ 
   init();
 
   function init(){
       getSubjectList();
+      pagination();
+  }
+
+  function pagination(){
+	    self.currentPage = 1;
+	    self.numberPerPage = 5;
   }
 
   function getSubjectList(){
@@ -23,21 +29,20 @@ function SubjectController($scope, $state, $window, subjectService){
     });
   }
 
-  self.saveSubject = function(){
-    subjectService.saveSubject(self.subject).then(function(response){
-        $state.go('home');
+  self.saveOrUpdateSubject = function(){
+    subjectService.saveOrUpdateSubject(self.subject).then(function(response){
+        getSubjectList();
+        $state.go('subject');
     });
   };
 
-  self.updateSubject = function(){
-    subjectService.updateSubject(self.subject).then(function(response){
-        $state.go('home');
-    });
+  self.updateSubject = function(subject){
+    $state.go('subject.modify', {subject: subject}, {relad: true, notify:true});
   };
 
-  self.deleteSubject = function(){
-    subjectService.deleteSubject(self.subject.subjectId).then(function(response){
-        $state.go('home');
+  self.deleteSubject = function(subjectId){
+    subjectService.deleteSubject(subjectId).then(function(response){
+        $state.reload();
     });
   };
 
@@ -46,6 +51,10 @@ function SubjectController($scope, $state, $window, subjectService){
       self.subject = response.data;
     });
   };
+  
+  self.paginateFilter = function(item){
+	    return paginateService.paginate(self.subjectList, item, self.currentPage, self.numberPerPage);
+	  }
 
 }
 })();
