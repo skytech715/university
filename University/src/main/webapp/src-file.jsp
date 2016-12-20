@@ -4,12 +4,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Import Angular Library Java Script Files -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-route.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-resource.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-cookies.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
 
   	<!-- CSS Style Sheet -->
   	<link rel="stylesheet" href="resource/css/bootstrap.css">
@@ -19,8 +21,9 @@
     <link rel="stylesheet" href="resource/css/component.css">
 
     <!-- Import Java Script Files-->
-    <script src="views/mainApp.js"></script>
-    <script src="views/back-to-top.directive.js"></script>
+    <script src="views/shared/mainApp.js"></script>
+    <script src="views/shared/back-to-top.directive.js"></script>
+    <script src="views/shared/paginate.service.js"></script>
     <script src="views/home/home.route.js"></script>
     <script src="views/course/course.route.js"></script>
    	<script src="views/course/course.service.js"></script>

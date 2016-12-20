@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -39,7 +40,7 @@ public class SubjectBean implements Serializable{
 	@Column(name = "credit_hour")
 	private double creditHour;
 	
-	@OneToMany(mappedBy="subjectBean", orphanRemoval=true, cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="subjectBean", orphanRemoval=true, cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	@JsonIgnore
 	private List<CourseSubjectBean> courseSubjectBean;
 

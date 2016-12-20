@@ -4,22 +4,27 @@
 angular.module('mainApp')
 .controller('CourseController', CourseController);
 
-CourseController.$inject = ['$scope', '$state', '$window', 'courseService'];
+CourseController.$inject = ['$scope', '$state', '$window', 'courseService', 'paginateService'];
 
-function CourseController($scope, $state, $window, courseService){
+function CourseController($scope, $state, $window, courseService, paginateService){
   var self = this;
   self.course = {};
-
+  
   init();
 
   function init(){
       getCourseList();
+      pagination();
+  }
+
+  function pagination(){
+    self.currentPage = 1;
+    self.numberPerPage = 5;
   }
 
   function getCourseList(){
     courseService.getCourseList().then(function(response){
       self.courseList = response.data;
-      console.log("StudentList " + JSON.stringify(studentList));
     });
   }
 
@@ -46,6 +51,10 @@ function CourseController($scope, $state, $window, courseService){
       self.course = response.data;
     });
   };
+
+  self.paginateFilter = function(item){
+    return paginateService.paginate(self.courseList, item, self.currentPage, self.numberPerPage);
+  }
 
 }
 })();

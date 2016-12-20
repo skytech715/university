@@ -1,7 +1,7 @@
 'use strict';
 
 (function(){
-var mainApp = angular.module('mainApp', ['ui.router', 'ngResource', 'ngCookies']);
+var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap','ngResource', 'ngCookies']);
 
 mainApp.config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
