@@ -19,6 +19,7 @@ function SubjectController($scope, $state, $window, subjectService){
   function getSubjectList(){
     subjectService.getSubjectList().then(function(response){
       self.subjectList = response.data;
+  
     });
   }
 

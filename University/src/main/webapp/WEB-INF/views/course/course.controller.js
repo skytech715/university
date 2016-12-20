@@ -19,6 +19,7 @@ function CourseController($scope, $state, $window, courseService){
   function getCourseList(){
     courseService.getCourseList().then(function(response){
       self.courseList = response.data;
+      console.log("StudentList " + JSON.stringify(studentList));
     });
   }
 

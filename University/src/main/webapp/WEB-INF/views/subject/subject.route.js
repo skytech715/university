@@ -5,7 +5,7 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 
 	$stateProvider.state('subject', {
 		url: '/subject',
-		templateUrl: 'views/subject/subject-form.html',
+		templateUrl: 'views/subject/subject-view.html',
 		controller: 'SubjectController',
 		controllerAs: 'subjectController',
 		data: {

@@ -19,6 +19,7 @@ function StudentController($scope, $state, $window, studentService){
   function getStudentList(){
     studentService.getStudentList().then(function(response){
       self.studentList = response.data;
+      console.log("StudentList " + JSON.stringify(self.studentList));
     });
   }
 

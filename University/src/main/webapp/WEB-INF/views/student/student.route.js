@@ -5,7 +5,7 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 
 	$stateProvider.state('student', {
 		url: '/student',
-		templateUrl: 'views/student/student-form.html',
+		templateUrl: 'views/student/student-view.html',
 		controller: 'StudentController',
 		controllerAs: 'studentController',
 		data: {
