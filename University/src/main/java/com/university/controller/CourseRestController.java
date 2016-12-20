@@ -28,14 +28,8 @@ public class CourseRestController {
         return view;
     }
 	
-	@RequestMapping(value = "/saveCourse", method=RequestMethod.POST)
-	public CourseBean saveCourse(@RequestBody CourseBean courseBean){
-		courseService.saveOrUpdate(courseBean);
-		return courseBean;
-	}
-	
-	@RequestMapping(value="/updateCourse", method=RequestMethod.POST)
-	public CourseBean updateCourse(@RequestBody CourseBean courseBean){
+	@RequestMapping(value = "/saveOrUpdateCourse", method=RequestMethod.POST)
+	public CourseBean saveOrUpdateCourse(@RequestBody CourseBean courseBean){
 		courseService.saveOrUpdate(courseBean);
 		return courseBean;
 	}

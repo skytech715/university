@@ -24,6 +24,9 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 		data: {
 			pageTitle: 'Course'
 		},
+		params:{
+			course: null
+		},
 		parent: 'course'
 	});
 }]);

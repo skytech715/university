@@ -8,8 +8,8 @@ CourseController.$inject = ['$scope', '$state', '$window', 'courseService', 'pag
 
 function CourseController($scope, $state, $window, courseService, paginateService){
   var self = this;
-  self.course = {};
-  
+  self.course = $state.params.course;
+
   init();
 
   function init(){
@@ -28,16 +28,15 @@ function CourseController($scope, $state, $window, courseService, paginateServic
     });
   }
 
-  self.saveCourse = function(){
-    courseService.saveCourse(self.course).then(function(response){
-        $state.go('home');
+  self.saveOrUpdateCourse = function(){
+    courseService.saveOrUpdateCourse(self.course).then(function(response){
+        getCourseList();
+        $state.go('course');
     });
   };
 
-  self.updateCourse = function(){
-    courseService.updateCourse(self.course).then(function(response){
-        $state.go('home');
-    });
+  self.updateCourse = function(course){
+    $state.go('course.modify', {course: course}, {reload: true, notify:true});
   };
 
   self.deleteCourse = function(courseId){

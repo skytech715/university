@@ -23,18 +23,10 @@ function courseService($log, $http){
   	});
   };
 
-  svc.saveCourse = function(course){
+  svc.saveOrUpdateCourse = function(course){
 	  return $http({
 		  method : 'POST',
-		  url : 'course/saveCourse',
-      data : course
-	  });
-  };
-
-  svc.updateCourse = function(course){
-    return $http({
-		  method : 'POST',
-		  url : 'course/updateCourse',
+		  url : 'course/saveOrUpdateCourse',
       data : course
 	  });
   };
@@ -47,6 +39,6 @@ function courseService($log, $http){
   };
 
   return svc;
-  
+
 }
 })();
