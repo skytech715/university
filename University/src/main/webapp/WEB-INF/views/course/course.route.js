@@ -17,9 +17,10 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 		templateUrl: 'views/course/course-view.html',
 		data: {
 			pageTitle: 'Course'
-		}
+		},
+		parent:'course'
 	}).state('course.modify', {
-		url: '/modify',
+		url: '/form',
 		templateUrl: 'views/course/course-modify.html',
 		data: {
 			pageTitle: 'Course'

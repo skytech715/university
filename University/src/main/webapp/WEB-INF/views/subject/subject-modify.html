@@ -25,6 +25,7 @@
          </div>
          <div class="x_content">
             <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-invalid ng-invalid-required" name="form" novalidate="" ng-submit="submit()">
+               <input type="text" ng-show="false" ng-model="subjectController.subject.subjectId">
                <div class="form-group" ng-class="{'has-error' : form.subjectName.$dirty &amp;&amp; form.subjectName.$invalid}">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subjectName">Subject Name
                   	<span class="required">*</span>
@@ -33,7 +34,7 @@
                      <input type="text" ng-model="subjectController.subject.name" name="subjectName" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="Subject Name" required="">
                   </div>
                   <span class="help-block validMessage ng-binding ng-hide" ng-show="form.subjectName.$dirty &amp;&amp; form.subjectName.$error.required">
-						Please Fill 
+						Please Fill
 					</span>
                </div>
                <div class="form-group" ng-class="{'has-error' : form.subjectCode.$dirty &amp;&amp; form.subjectCode.$invalid}">
@@ -41,11 +42,11 @@
                   	<span class="required">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                     <input type="text" ng-model="subjectController.subject.code" name="subjectCode" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" 
+                     <input type="text" ng-model="subjectController.subject.code" name="subjectCode" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched"
                       placeholder="Subject Code" required="">
                   </div>
                    <span class="help-block validMessage ng-binding ng-hide" ng-show="form.subjectCode.$dirty &amp;&amp; form.subjectCode.$error.required">
-						Please Fill 
+						Please Fill
 					</span>
                </div>
                <div class="form-group" ng-class="{'has-error' : form.creditHour.$dirty &amp;&amp; form.creditHour.$invalid}">
@@ -53,18 +54,18 @@
                   	<span class="required">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                     <input type="text" ng-model="subjectController.subject.creditHour" name="creditHour" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched" 
+                     <input type="text" ng-model="subjectController.subject.creditHour" name="creditHour" class="form-control col-md-7 col-xs-12 ng-pristine ng-invalid ng-invalid-required ng-touched"
                      placeholder="Credit Hour" required="">
                   </div>
                    <span class="help-block validMessage ng-binding ng-hide" ng-show="form.creditHour.$dirty &amp;&amp; form.creditHour.$error.required">
-						Please Fill 
+						Please Fill
 					</span>
                </div>
                <div class="form-group">
                   <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                 	 <button type="submit" class="btn btn-default ng-binding" ng-disabled="form.$invalid" disabled="disabled">Submit</button>
-                     <button type="submit" class="btn btn-default ng-binding">Cancel</button>
-                     <button type="submit" class="btn btn-default ng-binding" href="index.jsp">Reset</button>
+                 	 <button type="submit" class="btn btn-default ng-binding" ng-disabled="form.$invalid" ng-click="subjectController.saveOrUpdateSubject()">Submit</button>
+                     <button type="submit" class="btn btn-default ng-binding" ui-sref="subject">Cancel</button>
+                     <button type="reset" class="btn btn-default ng-binding">Reset</button>
                   </div>
                </div>
             </form>
@@ -77,13 +78,3 @@
    </div>
    <!-- /page content -->
 </div>
-
-
-
-
-
-<input type="text" ng-model="subjectController.subject[0].subjectId" ng-hide="false">
-    <input type="text" ng-model="subjectController.subject[0].name">
-    <input type="text" ng-model="subjectController.subject[0].code">
-    <input type="text" ng-model="subjectController.subject[0].creditHour">
-    <input type="submit" ng-click="" value="NULL">

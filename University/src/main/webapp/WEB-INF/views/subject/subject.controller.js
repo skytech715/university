@@ -9,7 +9,7 @@ SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService', 'p
 function SubjectController($scope, $state, $window, subjectService, paginateService){
   var self = this;
   self.subject = $state.params.subject;
- 
+
   init();
 
   function init(){
@@ -25,7 +25,7 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
   function getSubjectList(){
     subjectService.getSubjectList().then(function(response){
       self.subjectList = response.data;
-  
+
     });
   }
 
@@ -37,7 +37,7 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
   };
 
   self.updateSubject = function(subject){
-    $state.go('subject.modify', {subject: subject}, {relad: true, notify:true});
+    $state.go('subject.modify', {subject: subject}, {reload: true, notify:true});
   };
 
   self.deleteSubject = function(subjectId){
@@ -51,7 +51,7 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
       self.subject = response.data;
     });
   };
-  
+
   self.paginateFilter = function(item){
 	    return paginateService.paginate(self.subjectList, item, self.currentPage, self.numberPerPage);
 	  }
