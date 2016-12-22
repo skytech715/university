@@ -45,7 +45,7 @@
                      <tr class="even pointer">
                         <td class=" ">{{subject.name}}</td>
                         <td class=" ">{{subject.code}}</td>
-                        <td class=" ">{{subject.creditHour}}</td>
+                        <td class=" ">{{subject.creditHour | number:1}}</td>
                         <td>
                            <div class="btn-group">
                                <button type="button" class="btn btn1 btn-default tooltips color-white" ng-click="subjectController.updateSubject(subject)">
