@@ -4,11 +4,12 @@
 angular.module('mainApp')
 .controller('SubjectController', SubjectController);
 
-SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService', 'paginateService'];
+SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService', 'paginateService', 'tableSortingService'];
 
-function SubjectController($scope, $state, $window, subjectService, paginateService){
+function SubjectController($scope, $state, $window, subjectService, paginateService, tableSortingService){
   var self = this;
   self.subject = $state.params.subject;
+  self.tableSearch = "";
 
   init();
 
@@ -54,7 +55,12 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
 
   self.paginateFilter = function(item){
 	    return paginateService.paginate(self.subjectList, item, self.currentPage, self.numberPerPage);
-	  }
+  };
+  
+  self.changeSorting = function(column){
+	    self.sort = tableSortingService.changeSorting(column);
+	  };
+
 
 }
 })();

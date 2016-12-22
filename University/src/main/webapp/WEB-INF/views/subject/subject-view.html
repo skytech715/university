@@ -32,16 +32,17 @@
                <table class="table table-striped jambo_table bulk_action">
                   <thead>
                      <tr class="headings">
-                        <th class="column-title">Subject Name </th>
-                        <th class="column-title">Code</th>
-                        <th class="column-title">Credit Hour</th>
+                        <th class="column-title" ng-click="subjectController.changeSorting('name')">Subject Name <span ng-show="subjectController.sort.column == 'name'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!subjectController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="subjectController.sort.descending"></i></span></th>
+                        <th class="column-title" ng-click="subjectController.changeSorting('code')">Code<span ng-show="subjectController.sort.column == 'code'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!subjectController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="subjectController.sort.descending"></i></span></th>
+                        <th class="column-title" ng-click="subjectController.changeSorting('creditHour')">Credit Hour<span ng-show="subjectController.sort.column == 'creditHour'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!subjectController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="subjectController.sort.descending"></i></span></th>
                         <th class="column-title">Option </th>
                      </tr>
                      <tr>
-						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search=""></th>
+						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search="" ng-model="subjectController.tableSearch"></th>
 					</tr>
                   </thead>
-                  <tbody ng-repeat="subject in subjectController.subjectList | filter : subjectController.paginateFilter">
+                  <tbody ng-repeat="subject in subjectController.subjectList | filter : subjectController.paginateFilter
+                  | orderBy:subjectController.sort.column:subjectController.sort.descending | filter : subjectController.tableSearch">
                      <tr class="even pointer">
                         <td class=" ">{{subject.name}}</td>
                         <td class=" ">{{subject.code}}</td>

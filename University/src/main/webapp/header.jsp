@@ -47,34 +47,9 @@
 		<div class="navbar-collapse collapse" id="navbar-second-toggle">
 			<ul class="nav navbar-nav">
 				<li><a href="#"><i class="fa fa-dashboard position-left"></i>Home</a></li>
-
-				<li class="dropdown">
-					<a ui-sref="course" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="fa fa-book position-left"></i> Course <span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu width-250">
-						<li class="dropdown-header">Apps</li>
-						<li class="dropdown-submenu">
-							<a href="#"><i class="icon-task"></i> Task manager</a>
-							<ul class="dropdown-menu width-200">
-								<li class="dropdown-header highlight">Options</li>
-								<li><a href="task_manager_grid.html">Task grid</a></li>
-								<li><a href="task_manager_list.html">Task list</a></li>
-								<li><a href="task_manager_detailed.html">Task detailed</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a ui-sref="student" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						<i class="fa fa-graduation-cap position-left"></i> Student <span class="caret"></span>
-					</a>
-				</li>
-				<li class="dropdown">
-					<a ui-sref="subject" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						<i class="fa fa-tasks position-left"></i> Subject <span class="caret"></span>
-					</a>
-				</li>
+				<li><a ui-sref="course"><i class="fa fa-book position-left"></i>Course</a></li>
+				<li><a ui-sref="student"><i class="fa fa-graduation-cap position-left"></i>Student</a></li>
+				<li><a ui-sref="subject"><i class="fa fa-tasks position-left"></i>Subject</a></li>
 			</ul>
 		</div>
 	</div>
