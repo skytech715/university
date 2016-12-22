@@ -4,11 +4,12 @@
 angular.module('mainApp')
 .controller('CourseController', CourseController);
 
-CourseController.$inject = ['$scope', '$state', '$window', 'courseService', 'paginateService'];
+CourseController.$inject = ['$scope', '$state', '$window', 'courseService', 'paginateService', 'tableSortingService'];
 
-function CourseController($scope, $state, $window, courseService, paginateService){
+function CourseController($scope, $state, $window, courseService, paginateService, tableSortingService){
   var self = this;
   self.course = $state.params.course;
+  self.tableSearch = "";
 
   init();
 
@@ -53,7 +54,11 @@ function CourseController($scope, $state, $window, courseService, paginateServic
 
   self.paginateFilter = function(item){
     return paginateService.paginate(self.courseList, item, self.currentPage, self.numberPerPage);
-  }
+  };
+
+  self.changeSorting = function(column){
+    self.sort = tableSortingService.changeSorting(column);
+  };
 
 }
 })();
