@@ -5,21 +5,30 @@ angular.module('mainApp').config(['$stateProvider', '$urlRouterProvider','$locat
 
 	$stateProvider.state('student', {
 		url: '/student',
-		templateUrl: 'views/student/student-view.html',
+		template: '<div ui-view></div>',
 		controller: 'StudentController',
 		controllerAs: 'studentController',
 		data: {
 			pageTitle: 'Student'
-	  }
-	}).state
-	('student-modify',{
-		url:'/student-modify',
-		templateUrl:'views/student/student-modify.html',
-		controller:'StudentController',
-		controllerAs:'studentController',
+	  },
+		redirectTo: 'student.view'
+	}).state('student.view', {
+		url: '',
+		templateUrl: 'views/student/student-view.html',
 		data: {
-			pageTitle:'student.modify'
-		}
+			pageTitle: 'Student'
+		},
+		parent:'student'
+	}).state('student.modify', {
+		url: '/form',
+		templateUrl: 'views/student/student-modify.html',
+		data: {
+			pageTitle: 'Student'
+		},
+		params:{
+			student: null
+		},
+		parent: 'student'
 	});
 
 }]);

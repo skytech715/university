@@ -35,7 +35,7 @@ public class StudentBean implements Serializable{
 	private String nric;
 	
 	@Column(name = "mobile_number")
-	private int mobileNumber;
+	private String mobileNumber;
 	
 	@ManyToOne
 	@JoinColumn(name="course_id", referencedColumnName="course_id")
@@ -65,11 +65,11 @@ public class StudentBean implements Serializable{
 		this.nric = nric;
 	}
 
-	public int getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
 
-	public void setMobileNumber(int mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 

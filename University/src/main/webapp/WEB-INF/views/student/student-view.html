@@ -21,7 +21,7 @@
          <div class="x_title border-bottom">
             <h2>Student</h2>
             <ul class="nav navbar-right panel_toolbox">
-               <li ui-sref="student-modify"> <button type="button" class="btn btn-default btn-add">
+               <li ui-sref="student.modify({student:null})" ui-sref-opts="{reload: true}"> <button type="button" class="btn btn-default btn-add">
                   <i class="fa fa-plus"></i> ADD STUDENT
                   </button>
                </li>
@@ -32,30 +32,30 @@
                <table class="table table-striped jambo_table bulk_action">
                   <thead>
                      <tr class="headings">
-                        <th class="column-title">Student Name </th>
-                        <th class="column-title">IC Number </th>
-                        <th class="column-title">Mobile Number</th>
-                        <th class="column-title">Course Name</th>
+                        <th class="column-title" ng-click="studentController.changeSorting('name')">Student Name <span ng-show="studentController.sort.column == 'name'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!studentController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="studentController.sort.descending"></i></span></th>
+                        <th class="column-title" ng-click="studentController.changeSorting('nric')">IC Number <span ng-show="studentController.sort.column == 'nric'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!studentController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="studentController.sort.descending"></i></span></th>
+                        <th class="column-title" ng-click="studentController.changeSorting('mobileNumber')">Mobile Number <span ng-show="studentController.sort.column == 'mobileNumber'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!studentController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="studentController.sort.descending"></i></span></th>
+                        <th class="column-title" ng-click="studentController.changeSorting('courseBean.name')">Course Name <span ng-show="studentController.sort.column == 'courseBean.name'"><i class="fa fa-sort-amount-asc" aria-hidden="true" ng-show="!studentController.sort.descending"></i><i class="fa fa-sort-amount-desc" aria-hidden="true" ng-show="studentController.sort.descending"></i></span></th>
                         <th class="column-title">Option </th>
                      </tr>
                      <tr>
-						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search=""></th>
+						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search="" ng-model="studentController.tableSearch"></th>
 					</tr>
                   </thead>
-                  <tbody ng-repeat="student in studentController.studentList">
+                  <tbody ng-repeat="student in studentController.studentList | filter : studentController.paginateFilter | orderBy:studentController.sort.column:studentController.sort.descending | filter : studentController.tableSearch">
                      <tr class="even pointer">
                         <td class=" ">{{student.name}}</td>
                         <td class=" ">{{student.nric}}</td>
                         <td class=" ">{{student.mobileNumber}}</td>
                         <td class=" ">{{student.courseBean.name}}</td>
-                      
+
                         <td>
                            <div class="btn-group">
-                               <button type="button" class="btn btn1 btn-default tooltips color-white">
+                               <button type="button" class="btn btn1 btn-default tooltips color-white" ng-click="studentController.updateStudent(student)">
                               <span class="tooltips-details">Update</span>
                               <i class="fa fa-pencil"></i>
                               </button>
-                              <button type="button" class="btn btn1 btn-default tooltips color-white">
+                              <button type="button" class="btn btn1 btn-default tooltips color-white" ng-click="studentController.deleteStudent(student.studentId)">
                               <span class="tooltips-details">Delete</span>
                               <i class="fa fa-trash"></i>
                               </button>
@@ -65,16 +65,7 @@
                   </tbody>
                </table>
                <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-               	<a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a>
-               	<span>
-               		<a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0">5</a>
-               		<a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0">6</a>
-               	</span>
-               		<a class="paginate_button next" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a>
+                 <pagination total-items="studentController.studentList.length" items-per-page="studentController.numberPerPage" ng-model="studentController.currentPage" max-size="5" boundary-links="true"  class="pagination-sm"></pagination>
                </div>
             </div>
          </div>
@@ -85,12 +76,3 @@
    </div>
    <!-- /page content -->
 </div>
-<input type="text" ng-model="studentController.studentList[0].studentId" ng-hide="false">
-    <input type="text" ng-model="studentController.studentList[0].name">
-    <input type="text" ng-model="studentController.studentList[0].nric">
-    <input type="text" ng-model="studentController.studentList[0].mobileNumber">
-    <input type="text" ng-model="studentController.studentList[0].courseId">
-    <input type="submit" ng-click="" value="">
-    
-
-    

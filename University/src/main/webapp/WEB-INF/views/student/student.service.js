@@ -23,18 +23,10 @@ function studentService($log, $http){
   	});
   };
 
-  svc.saveStudent = function(student, courseId){
+  svc.saveOrUpdateStudent = function(student, courseId){
 	  return $http({
 		  method : 'POST',
-		  url : 'student/saveStudent/' + courseId,
-      data : student
-	  });
-  };
-
-  svc.updateStudent = function(student, courseId){
-    return $http({
-		  method : 'POST',
-		  url : 'student/updateStudent/' + courseId,
+		  url : 'student/saveOrUpdateStudent/' + courseId,
       data : student
 	  });
   };

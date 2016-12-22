@@ -32,15 +32,8 @@ public class StudentRestController {
         return view;
     }
 	
-	@RequestMapping(value = "/saveStudent/{courseId}", method=RequestMethod.POST)
-	public StudentBean saveStudent(@PathVariable("courseId") int courseId, @RequestBody StudentBean studentBean){
-		studentBean.setCourseBean(courseService.load(courseId));
-		studentService.saveOrUpdate(studentBean);
-		return studentBean;
-	}
-	
-	@RequestMapping(value="/updateStudent/{courseId}", method=RequestMethod.POST)
-	public StudentBean updateStudent(@PathVariable("courseId") int courseId, @RequestBody StudentBean studentBean){
+	@RequestMapping(value = "/saveOrUpdateStudent/{courseId}", method=RequestMethod.POST)
+	public StudentBean saveOrUpdateStudent(@PathVariable("courseId") int courseId, @RequestBody StudentBean studentBean){
 		studentBean.setCourseBean(courseService.load(courseId));
 		studentService.saveOrUpdate(studentBean);
 		return studentBean;
