@@ -42,7 +42,7 @@
 						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search="" ng-model="studentController.tableSearch"></th>
 					</tr>
                   </thead>
-                  <tbody ng-repeat="student in studentController.studentList | filter : studentController.paginateFilter | orderBy:studentController.sort.column:studentController.sort.descending | filter : studentController.tableSearch">
+                  <tbody ng-repeat="student in studentController.studentList = (studentController.allStudent | filter : studentController.tableSearch) | filter : studentController.paginateFilter | orderBy:studentController.sort.column:studentController.sort.descending">
                      <tr class="even pointer">
                         <td class=" ">{{student.name}}</td>
                         <td class=" ">{{student.nric}}</td>

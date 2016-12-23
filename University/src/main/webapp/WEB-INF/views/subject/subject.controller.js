@@ -26,7 +26,7 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
   function getSubjectList(){
     subjectService.getSubjectList().then(function(response){
       self.subjectList = response.data;
-
+      self.allSubject = self.subjectList;
     });
   }
 
@@ -56,11 +56,10 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
   self.paginateFilter = function(item){
 	    return paginateService.paginate(self.subjectList, item, self.currentPage, self.numberPerPage);
   };
-  
+
   self.changeSorting = function(column){
 	    self.sort = tableSortingService.changeSorting(column);
-	  };
-
+	};
 
 }
 })();

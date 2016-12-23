@@ -1,11 +1,12 @@
 <div class="page-header">
    <div class="page-header-content">
       <div class="page-title">
-         <h4><i class="fa fa-chevron-circle-left position-left"></i> <span class="text-semibold">Home</span> - Course</h4>
+         <h4><i class="fa fa-chevron-circle-left position-left"></i> <span class="text-semibold">Home</span> - Course Form</h4>
          <ul class="breadcrumb breadcrumb-caret position-right">
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="course">Course</a></li>
-            <li class="active">Add Course</li>
+            <li class="active" ng-show="courseController.course==null">Add Course</li>
+            <li class="active" ng-show="courseController.course!=null">Edit Course</li>
          </ul>
          <a class="heading-elements-toggle"><i class="icon-more"></i></a>
       </div>
@@ -21,7 +22,8 @@
       <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
       <div class="x_panel">
          <div class="x_title border-bottom">
-            <h2>Add Course</h2>
+            <h2 ng-show="courseController.course==null">Add Course</h2>
+            <h2 ng-show="courseController.course!=null">Edit Course</h2>
          </div>
          <div class="x_content">
             <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-invalid ng-invalid-required" name="form" novalidate="" ng-submit="submit()">

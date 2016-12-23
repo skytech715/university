@@ -26,6 +26,7 @@ function CourseController($scope, $state, $window, courseService, paginateServic
   function getCourseList(){
     courseService.getCourseList().then(function(response){
       self.courseList = response.data;
+      self.allCourse = self.courseList;
     });
   }
 

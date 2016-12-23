@@ -27,6 +27,7 @@ function StudentController($scope, $state, $window, studentService, courseServic
   function getStudentList(){
     studentService.getStudentList().then(function(response){
       self.studentList = response.data;
+      self.allStudent = self.studentList;
     });
   }
 

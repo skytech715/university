@@ -41,7 +41,7 @@
 						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search="" ng-model="courseController.tableSearch"></th>
 					</tr>
                   </thead>
-                  <tbody ng-repeat="course in courseController.courseList | filter : courseController.paginateFilter | orderBy:courseController.sort.column:courseController.sort.descending | filter : courseController.tableSearch">
+                  <tbody ng-repeat="course in courseController.courseList = (courseController.allCourse | filter : courseController.tableSearch) | filter : courseController.paginateFilter | orderBy:courseController.sort.column:courseController.sort.descending">
                      <tr class="even pointer">
                         <td class="">{{course.name}}</td>
                         <td class="">{{course.level}}</td>

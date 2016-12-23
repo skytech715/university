@@ -41,8 +41,8 @@
 						<th colspan="5"><input type="text" class="form-control" placeholder="Search..." st-search="" ng-model="subjectController.tableSearch"></th>
 					</tr>
                   </thead>
-                  <tbody ng-repeat="subject in subjectController.subjectList | filter : subjectController.paginateFilter
-                  | orderBy:subjectController.sort.column:subjectController.sort.descending | filter : subjectController.tableSearch">
+                  <tbody ng-repeat="subject in subjectController.subjectList = (subjectController.allSubject | filter : subjectController.tableSearch) | filter : subjectController.paginateFilter
+                  | orderBy:subjectController.sort.column:subjectController.sort.descending">
                      <tr class="even pointer">
                         <td class=" ">{{subject.name}}</td>
                         <td class=" ">{{subject.code}}</td>
