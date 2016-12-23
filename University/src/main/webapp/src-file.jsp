@@ -20,12 +20,15 @@
   	<link rel="stylesheet" href="resource/css/style.css">
   	<link rel="stylesheet" href="resource/css/color-theme.css">
     <link rel="stylesheet" href="resource/css/component.css">
+    <link rel="stylesheet" href="resource/css/sweetalert.css">
 
     <!-- Import Java Script Files-->
+    <script src="resource/javascript/sweetalert.min.js"></script>
     <script src="views/shared/mainApp.js"></script>
     <script src="views/shared/back-to-top.directive.js"></script>
     <script src="views/shared/paginate.service.js"></script>
     <script src="views/shared/table-sorting.service.js"></script>
+    <script src="views/shared/swal.service.js"></script>
     <script src="views/home/home.route.js"></script>
     <script src="views/course/course.route.js"></script>
    	<script src="views/course/course.service.js"></script>

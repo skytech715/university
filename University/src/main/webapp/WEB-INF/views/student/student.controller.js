@@ -4,9 +4,9 @@
 angular.module('mainApp')
 .controller('StudentController', StudentController);
 
-StudentController.$inject = ['$scope', '$state', '$window', 'studentService', 'courseService', 'paginateService', 'tableSortingService'];
+StudentController.$inject = ['$scope', '$state', '$window', 'studentService', 'courseService', 'paginateService', 'tableSortingService', 'swalService'];
 
-function StudentController($scope, $state, $window, studentService, courseService, paginateService, tableSortingService){
+function StudentController($scope, $state, $window, studentService, courseService, paginateService, tableSortingService, swalService){
   var self = this;
   self.student = $state.params.student;
   self.tableSearch = "";
@@ -49,8 +49,12 @@ function StudentController($scope, $state, $window, studentService, courseServic
   };
 
   self.deleteStudent = function(studentId){
-    studentService.deleteStudent(studentId).then(function(response){
-        $state.reload();
+    swalService.promptDeleteMessage( function(isConfirm) {
+      if(isConfirm){
+        studentService.deleteStudent(studentId).then(function(response){
+            $state.reload();
+        });
+      }
     });
   };
 

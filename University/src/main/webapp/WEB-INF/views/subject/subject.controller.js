@@ -4,9 +4,9 @@
 angular.module('mainApp')
 .controller('SubjectController', SubjectController);
 
-SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService', 'paginateService', 'tableSortingService'];
+SubjectController.$inject = ['$scope', '$state', '$window', 'subjectService', 'paginateService', 'tableSortingService', 'swalService'];
 
-function SubjectController($scope, $state, $window, subjectService, paginateService, tableSortingService){
+function SubjectController($scope, $state, $window, subjectService, paginateService, tableSortingService, swalService){
   var self = this;
   self.subject = $state.params.subject;
   self.tableSearch = "";
@@ -42,8 +42,12 @@ function SubjectController($scope, $state, $window, subjectService, paginateServ
   };
 
   self.deleteSubject = function(subjectId){
-    subjectService.deleteSubject(subjectId).then(function(response){
-        $state.reload();
+    swalService.promptDeleteMessage( function(isConfirm) {
+      if(isConfirm){
+        subjectService.deleteSubject(subjectId).then(function(response){
+            $state.reload();
+        });
+      }
     });
   };
 

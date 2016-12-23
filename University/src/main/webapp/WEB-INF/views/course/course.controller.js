@@ -4,9 +4,9 @@
 angular.module('mainApp')
 .controller('CourseController', CourseController);
 
-CourseController.$inject = ['$scope', '$state', '$window', 'courseService', 'paginateService', 'tableSortingService'];
+CourseController.$inject = ['$scope', '$state', '$window', 'courseService', 'paginateService', 'tableSortingService', 'swalService'];
 
-function CourseController($scope, $state, $window, courseService, paginateService, tableSortingService){
+function CourseController($scope, $state, $window, courseService, paginateService, tableSortingService, swalService){
   var self = this;
   self.course = $state.params.course;
   self.tableSearch = "";
@@ -42,8 +42,12 @@ function CourseController($scope, $state, $window, courseService, paginateServic
   };
 
   self.deleteCourse = function(courseId){
-    courseService.deleteCourse(courseId).then(function(response){
-        $state.reload();
+    swalService.promptDeleteMessage( function(isConfirm) {
+      if(isConfirm){
+        courseService.deleteCourse(courseId).then(function(response){
+            $state.reload();
+        });
+      }
     });
   };
 
