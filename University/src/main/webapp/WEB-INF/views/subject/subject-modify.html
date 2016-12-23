@@ -26,8 +26,8 @@
             <h2 ng-show="subjectController.subject!=null">Edit Subject</h2>
          </div>
          <div class="x_content">
+            <input type="text" ng-show="false" ng-model="subjectController.subject.subjectId">
             <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-invalid ng-invalid-required" name="form" novalidate="" ng-submit="submit()">
-               <input type="text" ng-show="false" ng-model="subjectController.subject.subjectId">
                <div class="form-group" ng-class="{'has-error' : form.subjectName.$dirty &amp;&amp; form.subjectName.$invalid}">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subjectName">Subject Name
                   	<span class="required">*</span>
